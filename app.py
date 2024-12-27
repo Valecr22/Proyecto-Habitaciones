@@ -24,7 +24,7 @@ with st.sidebar:
     num_compañeros = st.text_input("¿Cuántos nuevos compañeros quieres buscar?")
     
     if st.button('BUSCAR NUEVOS COMPAÑEROS'):
-        # Verifica que el número de compañeros sea un valor válido
+        # Verifico que el número de compañeros sea un valor válido
         try:
             topn = int(num_compañeros)
         except ValueError:
@@ -35,7 +35,7 @@ with st.sidebar:
         id_inquilinos = obtener_id_inquilinos(inquilino1, inquilino2, inquilino3, topn)
 
         if id_inquilinos and topn is not None:
-            # Llama a la función inquilinos_compatibles con los parámetros correspondientes
+            # Llama a la función inquilinos_compatibles 
             resultado = inquilinos_compatibles(id_inquilinos, topn)
 
 # Verificar si 'resultado' contiene un mensaje de error (cadena de texto)
